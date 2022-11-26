@@ -9,6 +9,8 @@ public class CompetController : MonoBehaviour
     [SerializeField]
     Animator animator;
 
+    [SerializeField]
+    GameObject comic;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class CompetController : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("Clicked on " + gameObject);
-        animator.SetTrigger("triggerHappy");
+        comic.SetActive(false);
+        if(gameObject.tag=="Compet") animator.SetTrigger("triggerHappy");
     }
 }
