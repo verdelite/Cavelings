@@ -1,39 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class UIController : MonoBehaviour
 {
 
     [SerializeField]
-    GameObject btnActivity;
+    GameManager gameManager;
+    public UIXPBar friendshipBar;
 
     [SerializeField]
-    GameObject activityMenu;
+    TextMeshProUGUI levelDisplay;
 
-    [SerializeField]
-    GameObject standardMenu;
-    // Start is called before the first frame update
-    void Start()
+    public void SetMaxXP(int maxXP)
     {
-        
+        friendshipBar.SetMaxXP(maxXP);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetXP(int currentXP)
     {
-        
+        friendshipBar.SetXP(currentXP);
     }
 
-    void OpenActivityMenu()
+    public void SetLevel(int level)
     {
-        activityMenu.SetActive(true);
-        standardMenu.SetActive(false);
-    }
-
-    void OpenStandardMenu()
-    {
-        standardMenu.SetActive(true);
-        activityMenu.SetActive(false);
+        levelDisplay.text = level.ToString();
     }
 }

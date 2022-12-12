@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class CompetController : MonoBehaviour
+public class CompetController : MonoBehaviour, IDropHandler
 {
 
     [SerializeField]
@@ -12,21 +13,34 @@ public class CompetController : MonoBehaviour
     [SerializeField]
     GameObject comic;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    GameManager gameManager;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    int clickXP = 5;
+
+    public void OnDrop(PointerEventData eventData)
     {
-        
+        if(eventData.pointerDrag != null)
+        {
+            ItemConsumable itemToConsume = eventData.pointerDrag.GetComponent<ItemConsumable>();
+            if(itemToConsume)
+            {
+                GainXP(itemToConsume.Consume());
+                animator.SetTrigger("triggerHappy");
+            }
+        }
     }
 
     void OnMouseDown()
     {
-        comic.SetActive(false);
+        //comic.SetActive(false);
         if(gameObject.tag=="Compet") animator.SetTrigger("triggerHappy");
+        GainXP(clickXP);
+    }
+
+    void GainXP(int gainedXP)
+    {
+        gameManager.GainXP(gainedXP);
     }
 }
