@@ -18,6 +18,9 @@ public class ItemConsumable : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     [SerializeField]
     CanvasGroup canvasGroup;
 
+    [SerializeField]
+    GameObject panelFood;
+
 
     private void Awake()
     {
@@ -39,6 +42,7 @@ public class ItemConsumable : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {
         canvasGroup.blocksRaycasts = true;
         if(rectTransform.anchoredPosition!=startPosition) rectTransform.anchoredPosition = startPosition;
+        panelFood.SetActive(false);
     }
 
     public int Consume()
