@@ -42,6 +42,7 @@ public class ItemConsumable : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {
         canvasGroup.blocksRaycasts = true;
         if(rectTransform.anchoredPosition!=startPosition) rectTransform.anchoredPosition = startPosition;
+        print("End Drag!");
         //panelFood.SetActive(false);
     }
 

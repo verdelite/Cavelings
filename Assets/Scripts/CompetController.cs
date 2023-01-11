@@ -19,15 +19,25 @@ public class CompetController : MonoBehaviour, IDropHandler
     [SerializeField]
     int clickXP = 5;
 
+    const float _petCooldown = 1.0f;
+    float activePetCooldown = 0.0f;
+
+    void Update()
+    {
+        if(activePetCooldown > 0) activePetCooldown -= Time.deltaTime;
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
+        print("Dropped " +eventData);
         if(eventData.pointerDrag != null)
         {
             ItemConsumable itemToConsume = eventData.pointerDrag.GetComponent<ItemConsumable>();
             if(itemToConsume)
             {
+                ResetAnimationTriggers();
                 GainXP(itemToConsume.Consume());
-                animator.SetTrigger("triggerHappy");
+                animator.SetTrigger("triggerEating");
             }
         }
     }
@@ -35,12 +45,27 @@ public class CompetController : MonoBehaviour, IDropHandler
     void OnMouseDown()
     {
         //comic.SetActive(false);
-        if(gameObject.tag=="Compet") animator.SetTrigger("triggerHappy");
-        GainXP(clickXP);
+        if(gameObject.tag=="Compet")
+        {
+            if(activePetCooldown <= 0)
+            {
+                animator.SetTrigger("triggerHappy");
+                GainXP(clickXP);
+                activePetCooldown = _petCooldown;
+            }
+        }
+        
     }
 
     void GainXP(int gainedXP)
     {
         gameManager.GainXP(gainedXP);
+    }
+
+    void ResetAnimationTriggers()
+    {
+        animator.ResetTrigger("triggerEating");
+        animator.ResetTrigger("triggerHappy");
+        animator.ResetTrigger("triggerShocked");
     }
 }

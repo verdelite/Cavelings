@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Compet
+    uniqueID: 1456293079
+    locked: 0
+  - name: Menu
+    uniqueID: 26764365
+    locked: 0
