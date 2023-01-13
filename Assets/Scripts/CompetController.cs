@@ -13,14 +13,18 @@ public class CompetController : MonoBehaviour, IDropHandler
     [SerializeField]
     GameObject comic;
 
-    [SerializeField]
-    GameManager gameManager;
+    public GameManager gameManager;
 
     [SerializeField]
     int clickXP = 5;
 
     const float _petCooldown = 1.0f;
     float activePetCooldown = 0.0f;
+
+    void Awake()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     void Update()
     {

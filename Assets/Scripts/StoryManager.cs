@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StoryManager : MonoBehaviour
 {
-    public int storyProgress = 0;
+    public int storyProgress = -1;
     
     public DialogueManager dialogueManager;
 
@@ -12,6 +12,8 @@ public class StoryManager : MonoBehaviour
 
     public GameObject[] scriptedEvents;
     GameObject activeEvent;
+
+    public GameManager gameManager;
 
     public Animator competAnimator;
 
@@ -24,6 +26,7 @@ public class StoryManager : MonoBehaviour
     void Awake()
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Start()
@@ -37,7 +40,22 @@ public class StoryManager : MonoBehaviour
         if(waitTimer > 0)
         {
             waitTimer -= Time.deltaTime;
-            if(waitTimer <= 0) activeEvent.SetActive(true);
+
+            
+            if(waitTimer <= 0)
+            {
+                // Delay on storyload and end
+                if(storyProgress == -1 || storyProgress == 9)
+                {
+                    ProgressStory();
+                }
+
+                else
+                {
+                    activeEvent.SetActive(true);
+                }
+                
+            }
         }
     }
 
@@ -58,6 +76,10 @@ public class StoryManager : MonoBehaviour
         // Scripted Story Events after DialogueScripts Storylevel go here...
         switch(storyProgress)
         {
+            case -1:
+                waitTimer = 1.0f;
+                break;
+
             case 0:
                 dialogueTrigger.TriggerDialogue("story_intro_01");
                 break;
@@ -116,7 +138,7 @@ public class StoryManager : MonoBehaviour
             case 6:
                 dialogueTrigger.TriggerDialogue("story_intro_03_song");
                 faveSong.Play();
-                DisableNextButton(10.0f);
+                DisableNextButton(5.0f);
                 break;
 
             case 7:
@@ -128,6 +150,14 @@ public class StoryManager : MonoBehaviour
                 scriptedEvents[2].SetActive(false);
                 scriptedEvents[3].SetActive(false);
                 dialogueTrigger.TriggerDialogue("story_intro_05");
+                break;
+
+            case 9:
+                waitTimer = 2.0f;
+                break;
+
+            case 10:
+                gameManager.LoadScene("Scenes/Menu");
                 break;
             
             default:

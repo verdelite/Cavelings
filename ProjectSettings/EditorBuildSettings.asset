@@ -14,14 +14,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: c6148cb87a00e454b9eb0be6f896e82a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Diary.unity
     guid: eac0a6b289415e8469cb4e77a6317212
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Play.unity
     guid: 372f44b27d0684647a52257841f9df64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Help.unity
     guid: 895d9aa405faf0b41ad99f4db94b9d6d
+  - enabled: 1
+    path: Assets/Scenes/Story_1.unity
+    guid: faeb5fde4192ae748bc5124fdd8b33a1
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2dfc88fa6c592c14eb223d9854ad27e5, type: 2}

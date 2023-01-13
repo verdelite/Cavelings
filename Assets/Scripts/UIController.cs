@@ -7,12 +7,16 @@ using TMPro;
 public class UIController : MonoBehaviour
 {
 
-    [SerializeField]
-    GameManager gameManager;
+    public GameManager gameManager;
     public UIXPBar friendshipBar;
 
     [SerializeField]
     TextMeshProUGUI levelDisplay;
+
+    void Awake()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     public void SetMaxXP(int maxXP)
     {
@@ -28,4 +32,5 @@ public class UIController : MonoBehaviour
     {
         levelDisplay.text = level.ToString();
     }
+
 }
