@@ -17,7 +17,7 @@ public class DialogueChoice : MonoBehaviour
     void Start()
     {
         storyManager = FindObjectOfType<StoryManager>();
-        choice.text = choiceText;
+        if(choice) choice.text = choiceText;
     }
 
     public void TriggerChoiceEvent()
