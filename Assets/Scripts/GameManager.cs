@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    public SoundManager soundManager;
+
     public int currentXP = 0;
     public int missingXP = 100;
     public int currentLevel = 1;
@@ -49,9 +51,12 @@ public class GameManager : MonoBehaviour
     {
         if(missingXP<=0)
         {
+            // Level Up!
             currentLevel++;
             currentXP =-missingXP;
             missingXP = 100;
+
+            soundManager.PlaySoundByName("level up");
         }
         uiController.SetLevel(currentLevel);
     }

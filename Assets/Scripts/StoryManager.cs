@@ -17,7 +17,7 @@ public class StoryManager : MonoBehaviour
 
     public Animator competAnimator;
 
-    public AudioSource faveSong;
+    SoundManager soundManager;
     float waitTimer = 0.0f;
 
     const int nextIndex = 4;
@@ -27,6 +27,7 @@ public class StoryManager : MonoBehaviour
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
         gameManager = FindObjectOfType<GameManager>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     void Start()
@@ -90,6 +91,8 @@ public class StoryManager : MonoBehaviour
                 break;
 
             case 2:
+                soundManager.PlaySoundByName("shocked");
+                soundManager.PlaySoundByName2("marshmallow calls! (loop as long as needed)");
                 competAnimator.SetTrigger("triggerShocked");
                 DisableNextButton(2.0f);
                 dialogueTrigger.TriggerDialogue("story_intro_02");
@@ -118,6 +121,8 @@ public class StoryManager : MonoBehaviour
 
             case -9:
                 dialogueTrigger.TriggerDialogue("story_intro_02_choice_anruf_ablehnen_loop_2");
+                soundManager.PlaySoundByName("shocked");
+                soundManager.PlaySoundByName2("marshmallow calls! (loop as long as needed)");
                 competAnimator.SetTrigger("triggerShocked");
                 DisableNextButton(2.0f);
                 break;
@@ -137,12 +142,13 @@ public class StoryManager : MonoBehaviour
 
             case 6:
                 dialogueTrigger.TriggerDialogue("story_intro_03_song");
-                faveSong.Play();
+                soundManager.PlaySoundByName2("The Beginning - Patrick Muczczek");
                 DisableNextButton(5.0f);
                 break;
 
             case 7:
                 dialogueTrigger.TriggerDialogue("story_intro_04");
+                //soundManager.StopSound2();
                 break;
 
             case 8:
@@ -175,12 +181,18 @@ public class StoryManager : MonoBehaviour
                 storyProgress = -11;
                 dialogueTrigger.TriggerDialogue(choiceLabel);
                 scriptedEvents[3].SetActive(false);
+
+                soundManager.StopSound2();
+
                 break;
             
             case "story_intro_02_choice_anruf_annehmen":
                 storyProgress = 4;
                 dialogueTrigger.TriggerDialogue(choiceLabel);
                 scriptedEvents[3].SetActive(false);
+
+                soundManager.StopSound2();
+
                 break;
 
             default:

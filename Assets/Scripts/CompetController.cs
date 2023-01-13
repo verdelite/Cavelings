@@ -10,20 +10,17 @@ public class CompetController : MonoBehaviour, IDropHandler
     [SerializeField]
     Animator animator;
 
-    [SerializeField]
-    GameObject comic;
-
     public GameManager gameManager;
+    SoundManager soundManager;
 
-    [SerializeField]
-    int clickXP = 5;
-
+    const int clickXP = 5;
     const float _petCooldown = 1.0f;
     float activePetCooldown = 0.0f;
 
     void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     void Update()
@@ -37,28 +34,34 @@ public class CompetController : MonoBehaviour, IDropHandler
         if(eventData.pointerDrag != null)
         {
             ItemConsumable itemToConsume = eventData.pointerDrag.GetComponent<ItemConsumable>();
+
             if(itemToConsume)
             {
+                // Item consumed successfully!
+
                 ResetAnimationTriggers();
                 GainXP(itemToConsume.Consume());
                 animator.SetTrigger("triggerEating");
+
+                soundManager.PlaySoundByName("eating");
             }
         }
     }
 
     void OnMouseDown()
     {
-        //comic.SetActive(false);
         if(gameObject.tag=="Compet")
         {
             if(activePetCooldown <= 0)
             {
+                // Pet successfully!
                 animator.SetTrigger("triggerHappy");
                 GainXP(clickXP);
                 activePetCooldown = _petCooldown;
+
+                soundManager.PlaySoundByName("happy");
             }
         }
-        
     }
 
     void GainXP(int gainedXP)
