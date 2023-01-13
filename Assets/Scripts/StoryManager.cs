@@ -16,7 +16,9 @@ public class StoryManager : MonoBehaviour
     public Animator competAnimator;
 
     public AudioSource faveSong;
-    float songWait = 0.0f;
+    float waitTimer = 0.0f;
+
+    const int nextIndex = 4;
 
 
     void Awake()
@@ -32,10 +34,10 @@ public class StoryManager : MonoBehaviour
 
     void Update()
     {
-        if(songWait > 0)
+        if(waitTimer > 0)
         {
-            songWait -= Time.deltaTime;
-            if(songWait <= 0) activeEvent.SetActive(true);
+            waitTimer -= Time.deltaTime;
+            if(waitTimer <= 0) activeEvent.SetActive(true);
         }
     }
 
@@ -67,6 +69,7 @@ public class StoryManager : MonoBehaviour
 
             case 2:
                 competAnimator.SetTrigger("triggerShocked");
+                DisableNextButton(2.0f);
                 dialogueTrigger.TriggerDialogue("story_intro_02");
                 break;
 
@@ -94,6 +97,7 @@ public class StoryManager : MonoBehaviour
             case -9:
                 dialogueTrigger.TriggerDialogue("story_intro_02_choice_anruf_ablehnen_loop_2");
                 competAnimator.SetTrigger("triggerShocked");
+                DisableNextButton(2.0f);
                 break;
 
             case -8:
@@ -112,9 +116,7 @@ public class StoryManager : MonoBehaviour
             case 6:
                 dialogueTrigger.TriggerDialogue("story_intro_03_song");
                 faveSong.Play();
-                songWait = 10.0f;
-                activeEvent = scriptedEvents[4];
-                activeEvent.SetActive(false);
+                DisableNextButton(10.0f);
                 break;
 
             case 7:
@@ -156,5 +158,12 @@ public class StoryManager : MonoBehaviour
                 dialogueTrigger.TriggerDialogue(choiceLabel);
                 break;
         }
+    }
+
+    void DisableNextButton(float cooldown)
+    {
+        waitTimer = cooldown;
+        activeEvent = scriptedEvents[nextIndex];
+        activeEvent.SetActive(false);
     }
 }
