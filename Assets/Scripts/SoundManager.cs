@@ -58,4 +58,16 @@ public class SoundManager : MonoBehaviour
     {
         soundSource2.Stop();
     }
+
+    public void PauseAllSound()
+    {
+        soundSource.Pause();
+        soundSource2.Pause();
+    }
+
+    public void UnpauseAllSound()
+    {
+        soundSource.UnPause();
+        soundSource2.UnPause();
+    }
 }
