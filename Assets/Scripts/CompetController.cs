@@ -30,7 +30,6 @@ public class CompetController : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        print("Dropped " +eventData);
         if(eventData.pointerDrag != null)
         {
             ItemConsumable itemToConsume = eventData.pointerDrag.GetComponent<ItemConsumable>();
