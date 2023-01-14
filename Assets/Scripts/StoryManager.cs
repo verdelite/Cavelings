@@ -72,6 +72,7 @@ public class StoryManager : MonoBehaviour
         CheckForStoryEvents();
     }
 
+    //TODO: Decouple this from the Manager script... maybe ScriptableObject?
     void CheckForStoryEvents()
     {
         // Scripted Story Events after DialogueScripts Storylevel go here...
@@ -159,7 +160,8 @@ public class StoryManager : MonoBehaviour
                 break;
 
             case 9:
-                waitTimer = 2.0f;
+                waitTimer = 3.0f;
+                gameManager.GainXP(500);
                 break;
 
             case 10:
@@ -172,6 +174,7 @@ public class StoryManager : MonoBehaviour
         return;
     }
 
+    //TODO: Decouple this from the Manager script... maybe ScriptableObject?
     public void TriggerChoiceEvent(string choiceLabel)
     {
         // Called from clicking a DialogueChoice

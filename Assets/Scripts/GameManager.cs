@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
             currentXP =-missingXP;
             missingXP = 100;
 
-            soundManager.PlaySoundByName("level up");
+            soundManager.PlaySoundByName2("level up");
         }
         uiController.SetLevel(currentLevel);
     }
