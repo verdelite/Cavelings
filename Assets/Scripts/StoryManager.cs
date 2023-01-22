@@ -5,6 +5,8 @@ using UnityEngine;
 public class StoryManager : MonoBehaviour
 {
     public int storyProgress = -1;
+
+    public int activeStoryChapter = 1;
     
     public DialogueManager dialogueManager;
 
@@ -42,18 +44,20 @@ public class StoryManager : MonoBehaviour
         {
             waitTimer -= Time.deltaTime;
 
-            
             if(waitTimer <= 0)
             {
-                // Delay on storyload and end
-                if(storyProgress == -1 || storyProgress == 9)
+                switch(activeStoryChapter)
                 {
-                    ProgressStory();
-                }
+                    case 1:
+                        CheckWaitEventsChapter1();
+                        break;
 
-                else
-                {
-                    activeEvent.SetActive(true);
+                    case 2:
+                        CheckWaitEventsChapter2();
+                        break;
+                    
+                    default:
+                        break;
                 }
                 
             }
@@ -74,6 +78,63 @@ public class StoryManager : MonoBehaviour
 
     //TODO: Decouple this from the Manager script... maybe ScriptableObject?
     void CheckForStoryEvents()
+    {
+        switch(activeStoryChapter)
+        {
+            case 1:
+                CheckForStoryEventsChapter1();
+                break;
+            
+            case 2:
+                CheckForStoryEventsChapter2();
+                break;
+
+            default:
+                break;
+        }
+        return;
+    }
+
+    //TODO: Decouple this from the Manager script... maybe ScriptableObject?
+    public void TriggerChoiceEvent(string choiceLabel)
+    {
+        // Called from clicking a DialogueChoice
+        switch(activeStoryChapter)
+        {
+            case 1:
+                TriggerChoiceEventsChapter1(choiceLabel);
+                break;
+
+            case 2:
+                TriggerChoiceEventsChapter2(choiceLabel);
+                break;
+
+            default:
+                break;
+        }
+        
+    }
+
+    void DisableNextButton(float cooldown)
+    {
+        waitTimer = cooldown;
+        activeEvent = scriptedEvents[nextIndex];
+        activeEvent.SetActive(false);
+    }
+
+    IEnumerator MoveSceneObject(GameObject objectToMove, Vector3 targetPosition, float speed)
+    {
+        while(objectToMove.transform.position != targetPosition)
+        {
+            objectToMove.transform.position = Vector3.MoveTowards(objectToMove.transform.position, targetPosition, speed * Time.deltaTime);
+            yield return null;
+        }
+
+    }
+
+
+    #region Story Events Chapter 1
+    void CheckForStoryEventsChapter1()
     {
         // Scripted Story Events after DialogueScripts Storylevel go here...
         switch(storyProgress)
@@ -161,7 +222,7 @@ public class StoryManager : MonoBehaviour
 
             case 9:
                 waitTimer = 3.0f;
-                gameManager.GainXP(500);
+                gameManager.GainXP(200);
                 break;
 
             case 10:
@@ -171,13 +232,10 @@ public class StoryManager : MonoBehaviour
             default:
                 break;
         }
-        return;
     }
 
-    //TODO: Decouple this from the Manager script... maybe ScriptableObject?
-    public void TriggerChoiceEvent(string choiceLabel)
+    void TriggerChoiceEventsChapter1(string choiceLabel)
     {
-        // Called from clicking a DialogueChoice
         switch(choiceLabel)
         {
             case "story_intro_02_choice_anruf_ablehnen":
@@ -205,10 +263,139 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    void DisableNextButton(float cooldown)
+    void CheckWaitEventsChapter1()
     {
-        waitTimer = cooldown;
-        activeEvent = scriptedEvents[nextIndex];
-        activeEvent.SetActive(false);
+        // Delay on storyload and end
+        if(storyProgress == -1 || storyProgress == 9)
+        {
+            ProgressStory();
+        }
+
+        else
+        {
+            activeEvent.SetActive(true);
+        }
     }
+
+    #endregion Story Events Chapter 1
+
+    #region Story Events Chapter 2
+    void CheckForStoryEventsChapter2()
+    {
+        // Scripted Story Events after DialogueScripts Storylevel go here...
+        switch(storyProgress)
+        {
+            case -1:
+                waitTimer = 1.0f;
+                break;
+
+            case 0:
+                dialogueTrigger.TriggerDialogue("story_02_1");
+                break;
+
+            case 1:
+                activeEvent = scriptedEvents[1];
+                activeEvent.SetActive(true);
+                break;
+
+            case 2:
+                dialogueTrigger.TriggerDialogue("story_02_2");
+                break;
+
+            case 3:
+                waitTimer = 3.0f;
+                activeEvent = scriptedEvents[0];
+                StartCoroutine(MoveSceneObject(activeEvent, scriptedEvents[5].transform.position, 3.0f));
+                break;
+
+            case 4:
+                waitTimer = 0.5f;
+                break;
+
+            case 5:
+                dialogueTrigger.TriggerDialogue("story_02_3");
+                break;
+
+            case 6:
+                waitTimer = 1.0f;
+                break;
+
+            case 7:
+                activeEvent = scriptedEvents[0];
+                scriptedEvents[6].SetActive(false);
+                scriptedEvents[8].SetActive(false);
+                scriptedEvents[11].SetActive(false);
+                activeEvent.transform.position = scriptedEvents[10].transform.position;
+                StartCoroutine(MoveSceneObject(activeEvent, new Vector3(0.0f, -4.02f, 0.0f), 3.0f));
+                waitTimer = 3.0f;
+                break;
+
+            case 8:
+                StopAllCoroutines();
+                dialogueTrigger.TriggerDialogue("story_02_4");
+                break;
+
+            case 9:
+                activeEvent = scriptedEvents[9];
+                activeEvent.SetActive(true);
+                break;
+
+            case 10:
+                dialogueTrigger.TriggerDialogue("story_02_5");
+                break;
+
+            case 11:
+                waitTimer = 3.0f;
+                gameManager.GainXP(250);
+                break;
+
+            case 12:
+                gameManager.LoadScene("Scenes/Menu");
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    void TriggerChoiceEventsChapter2(string choiceLabel)
+    {
+        switch(choiceLabel)
+        {
+            default:
+                activeEvent.SetActive(false);
+                dialogueTrigger.TriggerDialogue(choiceLabel);
+                break;
+        }
+    }
+
+    void CheckWaitEventsChapter2()
+    {
+        // Delay on storyload and end
+        if(storyProgress == -1)
+        {
+            ProgressStory();
+        }
+        else if(storyProgress == 3)
+        {
+            StopAllCoroutines();
+            scriptedEvents[6].SetActive(true);
+            scriptedEvents[0].transform.position = scriptedEvents[7].transform.position;
+            scriptedEvents[8].SetActive(true);
+            ProgressStory();
+        }
+
+        else if(storyProgress == 6)
+        {
+            scriptedEvents[11].SetActive(true);
+        }
+
+        else
+        {
+            //activeEvent.SetActive(true);
+            ProgressStory();
+        }
+    }
+
+    #endregion Story Events Chapter 2
 }
