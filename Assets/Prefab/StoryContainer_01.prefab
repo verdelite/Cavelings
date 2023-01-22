@@ -1,5 +1,522 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &363264948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 363264949}
+  - component: {fileID: 363264950}
+  m_Layer: 0
+  m_Name: story_intro_03_song
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &363264949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363264948}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &363264950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363264948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_03_song
+  dialogueText:
+  - label: 
+    text: "~ \u266B ~ \u266A ~ \u266A ~\u266B ~"
+--- !u!1 &430565741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 430565742}
+  - component: {fileID: 430565743}
+  m_Layer: 0
+  m_Name: story_intro_02_choice_anruf_ablehnen_loop_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &430565742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430565741}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &430565743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430565741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_02_choice_anruf_ablehnen_loop_3
+  dialogueText:
+  - label: Cavi
+    text: '"Jetzt ruft Marshmallow ja schon wieder an!"'
+  - label: Cavi
+    text: '"Ob ich nicht vielleicht doch rangehen sollte?"'
+--- !u!1 &927731947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927731948}
+  - component: {fileID: 927731949}
+  m_Layer: 0
+  m_Name: story_intro_02_choice_anruf_annehmen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927731948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927731947}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927731949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927731947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_02_choice_anruf_annehmen
+  dialogueText:
+  - label: Cavi
+    text: '"Ja, ich geh ran. Sie ist doch meine BFF!"'
+--- !u!1 &1002778368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1002778369}
+  - component: {fileID: 1002778370}
+  m_Layer: 0
+  m_Name: story_intro_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1002778369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002778368}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1002778370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002778368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_03
+  dialogueText:
+  - label: Cavi
+    text: '"Hey Marshmallow, was gibts?"'
+  - label: Marshmallow
+    text: "\"Hey Cavi! Ich hab l\xE4nger nichts mehr von dir geh\xF6rt und wollte
+      mich nach dir erkundigen.\""
+  - label: Cavi
+    text: "\"Es ist alles in Ordnung. H\xE4ttest du mir nicht einfach schreiben k\xF6nnen?\""
+  - label: Marshmallow
+    text: "\"Ich wei\xDF doch, dass dieses Wetter dich manchmal traurig macht.\""
+  - label: Marshmallow
+    text: "\"Du bist nicht alleine! Ich bin da f\xFCr dich.\""
+  - label: Cavi
+    text: "\"Oh mann, manchmal kennst du mich echt besser als ich mich selbst. Ich
+      bin echt total ger\xFChrt.\""
+  - label: Marshmallow
+    text: '"Ich bin ja nicht umsonst deine BFF!"'
+  - label: Marshmallow
+    text: "\"Sollen wir unser Lieblings Lied anh\xF6ren? Danach hast du wieder bessere
+      Laune!\""
+  - label: Cavi
+    text: '"Oh ja, voll gerne!"'
+--- !u!1 &1162540327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162540328}
+  - component: {fileID: 1162540329}
+  m_Layer: 0
+  m_Name: story_intro_02_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1162540328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162540327}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1162540329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162540327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_02_2
+  dialogueText:
+  - label: 
+    text: Es ist Marshmallow!
+  - label: Cavi
+    text: "\"Oh nein, ich m\xF6chte eigentlich gar nicht telefonieren!\""
+  - label: Cavi
+    text: '"Wieso ruft Marshmallow mich an und schreibt mir nicht stattdessen?" '
+  - label: Cavi
+    text: '"Hm, soll ich rangehen oder nicht?"'
+--- !u!1 &1336021834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336021835}
+  - component: {fileID: 1336021836}
+  m_Layer: 0
+  m_Name: story_intro_05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1336021835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336021834}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1336021836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336021834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_05
+  dialogueText:
+  - label: Cavi
+    text: "\"Das war ja sch\xF6n.\""
+  - label: Cavi
+    text: '"Ich bin froh, doch rangegangen zu sein!"'
+--- !u!1 &1515398288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515398289}
+  - component: {fileID: 1515398290}
+  m_Layer: 0
+  m_Name: story_intro_02_choice_anruf_ablehnen_loop_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1515398289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515398288}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1515398290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515398288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_02_choice_anruf_ablehnen_loop_1
+  dialogueText:
+  - label: Cavi
+    text: '"Puuh. Ich erschrecke mich jedes Mal, wenn ich angerufen werde."'
+  - label: Cavi
+    text: '"Findest du telefonieren auch so doof?"'
+  - label: Cavi
+    text: '"Hmm... Was Marshmallow wohl wollte?"'
+--- !u!1 &1619690287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1619690288}
+  - component: {fileID: 1619690289}
+  m_Layer: 0
+  m_Name: story_intro_02_choice_anruf_ablehnen_loop_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1619690288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619690287}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619690289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619690287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_02_choice_anruf_ablehnen_loop_2
+  dialogueText:
+  - label: Cavi
+    text: '!!!'
+--- !u!1 &1718409229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1718409230}
+  - component: {fileID: 1718409231}
+  m_Layer: 0
+  m_Name: story_intro_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1718409230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718409229}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1718409231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718409229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_04
+  dialogueText:
+  - label: Cavi
+    text: "\"Danke f\xFCr das sch\xF6ne Telefonat! Hab dich lieb.\""
+  - label: Marshmallow
+    text: '"Ach, immer gerne!"'
+  - label: Marshmallow
+    text: "\"Bis zum n\xE4chsten mal. Hab dich auch lieb!\""
+--- !u!1 &1896273744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1896273745}
+  - component: {fileID: 1896273746}
+  m_Layer: 0
+  m_Name: story_intro_02_choice_anruf_ablehnen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1896273745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896273744}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -115.23247, y: -177.52216, z: 828.7455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347146991956697224}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896273746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896273744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415899e631cccc04291369f40a84a4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptName: story_intro_02_choice_anruf_ablehnen
+  dialogueText:
+  - label: Cavi
+    text: '"Na gut, ich geh erstmal nicht ran!"'
 --- !u!1 &347146991956697227
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,6 +554,16 @@ Transform:
   - {fileID: 4166315574906993330}
   - {fileID: 4166315574250601254}
   - {fileID: 4166315573783276112}
+  - {fileID: 1162540328}
+  - {fileID: 927731948}
+  - {fileID: 1896273745}
+  - {fileID: 1515398289}
+  - {fileID: 1619690288}
+  - {fileID: 430565742}
+  - {fileID: 1002778369}
+  - {fileID: 363264949}
+  - {fileID: 1718409230}
+  - {fileID: 1336021835}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -70,6 +597,16 @@ MonoBehaviour:
   - {fileID: 4166315574906993331}
   - {fileID: 4166315574250601255}
   - {fileID: 4166315573783276113}
+  - {fileID: 1162540329}
+  - {fileID: 927731949}
+  - {fileID: 1896273746}
+  - {fileID: 1515398290}
+  - {fileID: 1619690289}
+  - {fileID: 430565743}
+  - {fileID: 1002778370}
+  - {fileID: 363264950}
+  - {fileID: 1718409231}
+  - {fileID: 1336021836}
 --- !u!114 &4166315574358547626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,7 +622,7 @@ MonoBehaviour:
   labelText: {fileID: 0}
   dialogueText: {fileID: 0}
   dialogueAnimator: {fileID: 0}
-  storyManager: {fileID: 0}
+  storyManager: {fileID: 4166315574358547627}
 --- !u!114 &4166315574358547627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,11 +635,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2124e96f1d2b947bd4ee50a6d7a1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyProgress: 0
+  storyProgress: -1
+  activeStoryChapter: 1
   dialogueManager: {fileID: 4166315574358547626}
   dialogueTrigger: {fileID: 4166315574358547621}
   scriptedEvents:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gameManager: {fileID: 0}
+  competAnimator: {fileID: 0}
 --- !u!1 &4166315573783276115
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,13 +694,7 @@ MonoBehaviour:
   scriptName: story_intro_02
   dialogueText:
   - label: 
-    text: "Pl\xF6tzlich klingelt das Telefon. Es ist Marshmallow!"
-  - label: Cavi
-    text: "\"Oh nein, ich m\xF6chte eigentlich gar nicht telefonieren!\""
-  - label: Cavi
-    text: '"Wieso ruft Marshmallow mich an und schreibt mir nicht stattdessen?" '
-  - label: Cavi
-    text: '"Hm, soll ich rangehen oder nicht?"'
+    text: "Pl\xF6tzlich klingelt das Telefon."
 --- !u!1 &4166315573852569862
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,10 +790,12 @@ MonoBehaviour:
   scriptName: story_intro_01
   dialogueText:
   - label: 
-    text: "Heute ist ein regnerischer tag und Cavi ist demnach etwas launisch und
+    text: "Heute ist ein regnerischer Tag und Cavi ist demnach etwas launisch und
       betr\xFCbt drauf."
   - label: Cavi
     text: '"Es regnet schon den ganzen Tag..."'
+  - label: Cavi
+    text: '"Magst du Regen?"'
 --- !u!1 &4166315574250601249
 GameObject:
   m_ObjectHideFlags: 0
