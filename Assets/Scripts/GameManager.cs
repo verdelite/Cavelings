@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
     public SoundManager soundManager;
 
     public int currentXP = 0;
-    public int missingXP = 100;
+    public int missingXP = 200;
     public int currentLevel = 1;
+
+    int baseXPNeeded = 200;
 
     public List<ItemConsumable> inventory;
 
@@ -54,7 +56,8 @@ public class GameManager : MonoBehaviour
             // Level Up!
             currentLevel++;
             currentXP =-missingXP;
-            missingXP = 100;
+            baseXPNeeded += 50;
+            missingXP = baseXPNeeded;
 
             soundManager.PlaySoundByName2("level up");
         }
