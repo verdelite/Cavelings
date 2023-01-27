@@ -305,10 +305,12 @@ public class StoryManager : MonoBehaviour
             case 3:
                 waitTimer = 3.0f;
                 activeEvent = scriptedEvents[0];
+                competAnimator.SetBool("isMoving", true);
                 StartCoroutine(MoveSceneObject(activeEvent, scriptedEvents[5].transform.position, 3.0f));
                 break;
 
             case 4:
+                competAnimator.SetBool("isMoving", false);
                 waitTimer = 0.5f;
                 break;
 
@@ -326,11 +328,13 @@ public class StoryManager : MonoBehaviour
                 scriptedEvents[8].SetActive(false);
                 scriptedEvents[11].SetActive(false);
                 activeEvent.transform.position = scriptedEvents[10].transform.position;
+                competAnimator.SetBool("isMoving", true);
                 StartCoroutine(MoveSceneObject(activeEvent, new Vector3(0.0f, -4.02f, 0.0f), 3.0f));
                 waitTimer = 3.0f;
                 break;
 
             case 8:
+                competAnimator.SetBool("isMoving", false);
                 StopAllCoroutines();
                 dialogueTrigger.TriggerDialogue("story_02_4");
                 break;

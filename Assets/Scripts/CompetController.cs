@@ -34,7 +34,7 @@ public class CompetController : MonoBehaviour, IDropHandler
         {
             ItemConsumable itemToConsume = eventData.pointerDrag.GetComponent<ItemConsumable>();
 
-            if(itemToConsume)
+            if(itemToConsume && itemToConsume.CheckAmountOwned())
             {
                 // Item consumed successfully!
 
