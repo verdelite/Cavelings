@@ -17,10 +17,17 @@ public class CompetController : MonoBehaviour, IDropHandler
     const float _petCooldown = 1.0f;
     float activePetCooldown = 0.0f;
 
+    public List<GameObject> accessoryList;
+
     void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
         soundManager = FindObjectOfType<SoundManager>();
+    }
+
+    void Start()
+    {
+        InitAccessories();
     }
 
     void Update()
@@ -73,5 +80,21 @@ public class CompetController : MonoBehaviour, IDropHandler
         animator.ResetTrigger("triggerEating");
         animator.ResetTrigger("triggerHappy");
         animator.ResetTrigger("triggerShocked");
+    }
+
+    public void ToggleAccessory(int index)
+    {
+        bool newActive = !accessoryList[index].gameObject.activeSelf;
+        accessoryList[index].gameObject.SetActive(newActive);
+
+        gameManager.UpdateAccessory(index, newActive);
+    }
+
+    void InitAccessories()
+    {
+        for(int i=0; i < accessoryList.Count; i++)
+        {
+            accessoryList[i].gameObject.SetActive(gameManager.accessoriesActive[i]);
+        }
     }
 }

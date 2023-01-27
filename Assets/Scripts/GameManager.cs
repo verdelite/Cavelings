@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     int baseXPNeeded = 200;
 
     public Dictionary<string, int> inventory = new Dictionary<string, int>();
+    public List<bool> accessoriesActive;
 
     public CompetController compet;
     public UIController uiController;
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
             baseXPNeeded = (int) (baseXPNeeded * 1.2f);
             missingXP = baseXPNeeded;
 
-            soundManager.PlaySoundByName2("level up");
+            soundManager.PlaySoundOnce("level up");
         }
         uiController.SetLevel(currentLevel);
     }
@@ -86,5 +87,10 @@ public class GameManager : MonoBehaviour
             UpdateLevel();
             UpdateXPBar();
         }
+    }
+
+    public void UpdateAccessory(int index, bool active)
+    {
+        accessoriesActive[index] = active;
     }
 }

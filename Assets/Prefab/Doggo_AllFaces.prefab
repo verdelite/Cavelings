@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &268196102
 Transform:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1000699232
 Transform:
   m_ObjectHideFlags: 0
@@ -184,7 +184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1363923718
 Transform:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 9186936522603728532}
   m_Bounds:
-    m_Center: {x: 0.0000014305115, y: 0.010000467, z: 0}
+    m_Center: {x: 0.0000014305115, y: 0.010000944, z: 0}
     m_Extent: {x: 3.5400012, y: 2.0100007, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -567,8 +567,8 @@ MonoBehaviour:
   - {fileID: 7178186833554271523}
   - {fileID: 6690461700105793188}
   m_Bounds:
-    m_Center: {x: 0, y: -0.00000047683716, z: 0}
-    m_Extent: {x: 8.789999, y: 5.27, z: 0}
+    m_Center: {x: 0.0000009536743, y: 0, z: 0}
+    m_Extent: {x: 8.79, y: 5.2700005, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3559104719394785201}
   m_Bounds:
-    m_Center: {x: -0.0023593903, y: 0.0030789375, z: 0}
+    m_Center: {x: -0.0023587942, y: 0.0030789375, z: 0}
     m_Extent: {x: 1.7576406, y: 2.1142206, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 6157802256838906626}
   m_Bounds:
-    m_Center: {x: 0.0027210712, y: -0.0008575916, z: 0}
+    m_Center: {x: 0.0027210712, y: -0.00085806847, z: 0}
     m_Extent: {x: 1.28728, y: 1.75914, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1053,8 +1053,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1611447963165826552}
   m_Bounds:
-    m_Center: {x: -0.00011861324, y: 0.0025892258, z: 0}
-    m_Extent: {x: 1.2598801, y: 1.8025901, z: 0}
+    m_Center: {x: -0.00011861324, y: 0.0025901794, z: 0}
+    m_Extent: {x: 1.2598802, y: 1.8025904, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 9186936522603728532}
   m_Bounds:
-    m_Center: {x: 0.00000166893, y: 0.010000467, z: 0}
+    m_Center: {x: 0.0000019073486, y: 0.010000944, z: 0}
     m_Extent: {x: 3.5400012, y: 2.0100007, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1484,9 +1484,11 @@ GameObject:
   - component: {fileID: 8134389411699978607}
   - component: {fileID: 7479632466278779059}
   - component: {fileID: 7479632465727871796}
+  - component: {fileID: 210994661}
+  - component: {fileID: 210994660}
   m_Layer: 0
   m_Name: Doggo_AllFaces
-  m_TagString: Untagged
+  m_TagString: Compet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1500,7 +1502,7 @@ Transform:
   m_GameObject: {fileID: 6929687180824029452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.4081658, y: -11.742043, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 302696072104675908}
@@ -1557,6 +1559,40 @@ PlayableDirector:
   m_SceneBindings: []
   m_ExposedReferences:
     m_References: []
+--- !u!70 &210994661
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929687180824029452}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.1298268, y: 12.873312}
+  m_Size: {x: 22.463108, y: 17.16018}
+  m_Direction: 1
+--- !u!114 &210994660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6929687180824029452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417b37a4135ee44499e5cee40d9e6135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7479632466278779059}
+  gameManager: {fileID: 0}
+  accessoryList:
+  - {fileID: 1000699231}
+  - {fileID: 268196101}
+  - {fileID: 1363923717}
 --- !u!1 &7102975300248979927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,7 +1793,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 9186936522603728532}
   m_Bounds:
-    m_Center: {x: 0.117516994, y: 0.17284012, z: 0}
+    m_Center: {x: 0.11751747, y: 0.17284036, z: 0}
     m_Extent: {x: 5.436765, y: 4.1315413, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1863,7 +1899,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4345452011245508585}
   m_Bounds:
-    m_Center: {x: 0.09869039, y: -0.095300436, z: 0}
+    m_Center: {x: 0.09869063, y: -0.09529996, z: 0}
     m_Extent: {x: 0.8706101, y: 0.93470013, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

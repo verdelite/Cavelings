@@ -38,6 +38,12 @@ public class SoundManager : MonoBehaviour
         if(soundSource2.clip) soundSource2.Play();
     }
 
+    public void PlaySoundOnce(string name)
+    {
+        soundSource2.clip = GetSoundByName(name);
+        if(soundSource2.clip) soundSource2.PlayOneShot(soundSource2.clip);
+    }
+
     AudioClip GetSoundByName(string name)
     {
         foreach(AudioClip sound in soundList)

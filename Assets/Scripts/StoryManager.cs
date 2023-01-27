@@ -349,8 +349,10 @@ public class StoryManager : MonoBehaviour
                 break;
 
             case 11:
+                // Completed Story Chapter 2! Rewards:
                 waitTimer = 3.0f;
                 gameManager.GainXP(250);
+                gameManager.inventory["Rice"] = gameManager.inventory["Rice"] + 1;
                 break;
 
             case 12:
