@@ -56,7 +56,7 @@ public class CompetController : MonoBehaviour, IDropHandler
 
     void OnMouseDown()
     {
-        if(gameObject.tag=="Compet")
+        if(gameObject.tag=="Compet" && gameManager.activeGameMode == GameManager.GameMode.Standard)
         {
             if(activePetCooldown <= 0)
             {

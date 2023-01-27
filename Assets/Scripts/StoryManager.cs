@@ -30,6 +30,8 @@ public class StoryManager : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
         gameManager = FindObjectOfType<GameManager>();
         soundManager = FindObjectOfType<SoundManager>();
+
+        gameManager.activeGameMode = GameManager.GameMode.Story;
     }
 
     void Start()
@@ -74,6 +76,31 @@ public class StoryManager : MonoBehaviour
     {
         storyProgress = newProgress;
         CheckForStoryEvents();
+    }
+
+    void CheckStoryRewards()
+    {
+        if(!gameManager.chaptersCleared[activeStoryChapter-1])
+        {
+            switch(activeStoryChapter)
+            {
+                case 1:
+                    gameManager.GainXP(200);
+                    gameManager.chaptersUnlocked[activeStoryChapter] = true;
+                    break;
+
+                case 2:
+                    gameManager.GainXP(250);
+                    gameManager.inventory["Rice"] = gameManager.inventory["Rice"] + 1;
+                    break;
+
+                default:
+                    break;
+            }
+        } 
+        
+        gameManager.chaptersCleared[activeStoryChapter-1] = true;
+  
     }
 
     //TODO: Decouple this from the Manager script... maybe ScriptableObject?
@@ -222,10 +249,11 @@ public class StoryManager : MonoBehaviour
 
             case 9:
                 waitTimer = 3.0f;
-                gameManager.GainXP(200);
+                CheckStoryRewards();
                 break;
 
             case 10:
+                gameManager.activeGameMode = GameManager.GameMode.Standard;
                 gameManager.LoadScene("Scenes/Menu");
                 break;
             
@@ -351,11 +379,11 @@ public class StoryManager : MonoBehaviour
             case 11:
                 // Completed Story Chapter 2! Rewards:
                 waitTimer = 3.0f;
-                gameManager.GainXP(250);
-                gameManager.inventory["Rice"] = gameManager.inventory["Rice"] + 1;
+                CheckStoryRewards();
                 break;
 
             case 12:
+                gameManager.activeGameMode = GameManager.GameMode.Standard;
                 gameManager.LoadScene("Scenes/Menu");
                 break;
 
@@ -402,6 +430,8 @@ public class StoryManager : MonoBehaviour
             ProgressStory();
         }
     }
+
+    
 
     #endregion Story Events Chapter 2
 }

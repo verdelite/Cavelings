@@ -19,8 +19,22 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, int> inventory = new Dictionary<string, int>();
     public List<bool> accessoriesActive;
 
+    public Dictionary<int, StoryChapterMenu> storyChapters = new Dictionary<int, StoryChapterMenu>();
+    public List<bool> chaptersUnlocked;
+    public List<bool> chaptersCleared;
+
     public CompetController compet;
     public UIController uiController;
+
+
+    public enum GameMode
+    {
+        Standard,
+        Story
+    }
+
+    public GameMode activeGameMode = GameMode.Standard;
+
 
     void Awake()
     {
