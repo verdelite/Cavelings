@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Compet
+  - MemoryCard
   layers:
   - Default
   - TransparentFX

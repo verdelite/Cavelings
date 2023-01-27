@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story_2.unity
     guid: c4401a0ce4ecc3f47bf14d6aaf7b0da1
+  - enabled: 1
+    path: Assets/Scenes/Minigame_Memory.unity
+    guid: cad04e0cd3d7b7549a7e4193289ff191
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5e5b814803cb45b45bf4aefba1b9d3d2, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: d3c79f5acde533046be5de7d33e7ab6e, type: 2}

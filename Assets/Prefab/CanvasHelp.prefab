@@ -216,24 +216,24 @@ MonoBehaviour:
     body: "Nimm 4 Sekunden lang tief Luft. \nHalte den Atem 4 Sekunden lang und dann
       atme 4 Sekunden aus. \nLass es los.\r\n\nWiederhole diese \xDCbung vier Mal."
   - title: Tief Durchatmen
-    body: "Leg Deine Hand auf deinen Bauch und atme tief ein. Sp\xFCre, wie du deinen
+    body: "Leg deine Hand auf deinen Bauch und atme tief ein. Sp\xFCre, wie du deinen
       Atem bis in den Bauch ziehst.\n\nAtme laut und langsam \xFCber deinen Mund
       wieder aus.\n\n\nWiederhole diese \xDCbung vier Mal."
   thinkingExercises:
   - title: "5-4-3-2-1 \xDCbung"
-    body: "- Nenne f\xFCnf Dinge, die Du sehen kannst\n\n- Nenne vier Dinge, die
-      Du f\xFChlen kannst\n\n- Nenne drei Dinge, die Du h\xF6ren kannst\n\n- Nenne
-      zwei Dinge, die Du riechen kannst\n\n- Nenne ein Ding, das Du schmecken kannst"
+    body: "- Nenne f\xFCnf Dinge, die du sehen kannst\n\n- Nenne vier Dinge, die
+      du f\xFChlen kannst\n\n- Nenne drei Dinge, die du h\xF6ren kannst\n\n- Nenne
+      zwei Dinge, die du riechen kannst\n\n- Nenne ein Ding, das du schmecken kannst"
   - title: Regenbogenspiel
-    body: "Sieh Dich um und finde einen Gegenstand f\xFCr jede Farbe des Regenbogens,
+    body: "Sieh dich um und finde einen Gegenstand f\xFCr jede Farbe des Regenbogens,
       beginnend mit Rot.\n\nSprich die Farbe laut aus, nenne den Gegenstand, und
       wof\xFCr er benutzt wird.\n\nAtme tief ein und aus, und mach mit der n\xE4chsten
-      Farbe weiter. \n\nWenn Du die n\xE4chste Farbe nicht findest, wiederhole einfach
-      die Farben, die Du bereits gefunden hast.\n\n\nRot - Orange - Gelb - Gr\xFCn
+      Farbe weiter. \n\nWenn du die n\xE4chste Farbe nicht findest, wiederhole einfach
+      die Farben, die du bereits gefunden hast.\n\n\nRot - Orange - Gelb - Gr\xFCn
       - Blau - Violett"
   - title: "3-3-3 \xDCbung"
-    body: "\n- Sieh Dich um un benenne drei Dinge, die Du sehen kannst.\n\n- Lausche
-      deiner Umgebung und nenne drei Ger\xE4usche, die Du h\xF6ren kannst.\n\n- Atme
+    body: "\n- Sieh dich um un benenne drei Dinge, die du sehen kannst.\n\n- Lausche
+      deiner Umgebung und nenne drei Ger\xE4usche, die du h\xF6ren kannst.\n\n- Atme
       tief durch und bewege drei verschiedene K\xF6rperpartien."
   motivationalExercises:
   - title: 
@@ -244,10 +244,10 @@ MonoBehaviour:
     body: Dein Frieden ist weitaus wichtiger als zu verstehen, warum etwas so passieren
       musste.
   - title: 
-    body: "Merke dir immer, dass dies Deine Welt ist. In Deiner Welt kannst du alles
+    body: "Merke dir immer, dass dies deine Welt ist. In deiner Welt kannst du alles
       erm\xF6glichen, wonach du dich sehnst."
   - title: 
-    body: Fokussiere Dich auf Dich und nicht auf den Sturm.
+    body: Fokussiere dich auf dich und nicht auf den Sturm.
   - title: 
     body: Ich bin sicher und mein Verstand ist ruhig.
   - title: 
