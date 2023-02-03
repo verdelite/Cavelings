@@ -74,9 +74,16 @@ public class GameManager : MonoBehaviour
             baseXPNeeded = (int) (baseXPNeeded * 1.2f);
             missingXP = baseXPNeeded;
 
-            soundManager.PlaySoundOnce("level up");
+            StartCoroutine(LevelUpSound());
         }
         uiController.SetLevel(currentLevel);
+    }
+
+    IEnumerator LevelUpSound()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        soundManager.PlaySoundByName("level up");
     }
 
     public void UpdateXPBar()

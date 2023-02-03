@@ -13,7 +13,7 @@ public class CompetController : MonoBehaviour, IDropHandler
     public GameManager gameManager;
     SoundManager soundManager;
 
-    const int clickXP = 5;
+    const int clickXP = 2;
     const float _petCooldown = 1.0f;
     float activePetCooldown = 0.0f;
 
